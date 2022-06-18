@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^cms.collaboratar.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://cms.collaboratar.com/$1 [R,L]
+RewriteEngine on
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
